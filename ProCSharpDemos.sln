@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProCSharpDemos", "ProCSharpDemos\ProCSharpDemos.csproj", "{54803448-8C1E-40A7-81B5-6A04592DFD69}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapterOne", "ChapterOne\ChapterOne.csproj", "{063CD419-69FE-4A41-B87F-CFD616FA10D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapterThree", "ChapterThree\ChapterThree.csproj", "{E02DA831-8F70-45AC-A757-5E1EE681E6A0}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{54803448-8C1E-40A7-81B5-6A04592DFD69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54803448-8C1E-40A7-81B5-6A04592DFD69}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54803448-8C1E-40A7-81B5-6A04592DFD69}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54803448-8C1E-40A7-81B5-6A04592DFD69}.Release|Any CPU.Build.0 = Release|Any CPU
 		{063CD419-69FE-4A41-B87F-CFD616FA10D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{063CD419-69FE-4A41-B87F-CFD616FA10D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{063CD419-69FE-4A41-B87F-CFD616FA10D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
