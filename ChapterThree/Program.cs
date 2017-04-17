@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace ChapterThree
 {
@@ -6,6 +7,8 @@ namespace ChapterThree
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public String stringType { get; set; }
+        public Int32 intType { get; set; }
         //C# 6.0 new feature: string interpolation
         //Please don't use "="!
 
@@ -23,11 +26,25 @@ namespace ChapterThree
 
             //ShowEnvironmentDetails();
             FormatNumericalData();
-            Console.ReadLine();
+
 
             var floatNum = 1.23f;
             var doubleNum = 1.23;
             var decimalNum = 1.23m;
+
+            //BigInteger represents an arbitrary large signed value
+            BigInteger bi = new BigInteger(123456676.78974f);
+            Console.WriteLine($"The value of bi is  {bi}");
+
+            Console.WriteLine($"The max value and min value of byte is {byte.MaxValue} and {byte.MinValue}");
+            Console.WriteLine($"The max value and min value of uint is {uint.MaxValue} and {uint.MinValue}");
+            Console.WriteLine($"double.Epsilon: {double.Epsilon}");
+            Console.WriteLine($"double.PositiveInfinity: {double.PositiveInfinity}");
+            Console.WriteLine($"double.NegativeInfinity: {double.NegativeInfinity}");
+            Console.WriteLine($"bool.FalseString: {bool.FalseString}");
+            Console.WriteLine($"bool.TrueString: {bool.TrueString}");
+            CharFunctionality();
+            Console.ReadLine();
         }
 
         static void ShowEnvironmentDetails()
@@ -53,6 +70,16 @@ namespace ChapterThree
             Console.WriteLine($"e format: {99999:e}");
             Console.WriteLine($"X format: {99999:X}");
             Console.WriteLine($"x format: {99999:x}");
+
+            bool isFalse = new bool();
+            Console.WriteLine($"isFalse is {isFalse}");
+        }
+
+        static void CharFunctionality()
+        {
+            Console.WriteLine($"char.isPunctuation('?'): {char.IsPunctuation('?')}");
+
+            Console.WriteLine($"char.IsPunctuation('!'): {char.IsPunctuation('!')}");
         }
     }
 }
