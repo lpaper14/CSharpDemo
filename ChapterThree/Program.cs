@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Numerics;
+using System.Linq;
 
 namespace ChapterThree
 {
@@ -31,6 +32,9 @@ namespace ChapterThree
             var floatNum = 1.23f;
             var doubleNum = 1.23;
             var decimalNum = 1.23m;
+            //var is not a c# key word
+            //var var = "var";
+            
 
             //BigInteger represents an arbitrary large signed value
             BigInteger bi = new BigInteger(123456676.78974f);
@@ -38,12 +42,32 @@ namespace ChapterThree
 
             Console.WriteLine($"The max value and min value of byte is {byte.MaxValue} and {byte.MinValue}");
             Console.WriteLine($"The max value and min value of uint is {uint.MaxValue} and {uint.MinValue}");
+            //Console.WriteLine("\a");
             Console.WriteLine($"double.Epsilon: {double.Epsilon}");
             Console.WriteLine($"double.PositiveInfinity: {double.PositiveInfinity}");
             Console.WriteLine($"double.NegativeInfinity: {double.NegativeInfinity}");
+            //Thread.Sleep(5000);
+            //Console.WriteLine("\a");
             Console.WriteLine($"bool.FalseString: {bool.FalseString}");
             Console.WriteLine($"bool.TrueString: {bool.TrueString}");
             CharFunctionality();
+            Console.Beep();
+
+            string myLongString = @"This is a very                         
+                                            very       
+                                       long string";
+            Console.WriteLine(myLongString);
+
+            string s1 = "Yo!";
+            Console.WriteLine($"Yo! == s1 is {"Yo!".Equals(s1)}");
+            Console.WriteLine(s1.ToUpper());
+
+            //int a = 100000, b = 100000;
+            //Console.WriteLine($"{(short)(a + b)}");
+            //LinqQueryOverInts();
+            //WhileLoopExample();
+
+            var favDay = (DayOfWeek)Enum.Parse(typeof(DayOfWeek), "Wednesday");
             Console.ReadLine();
         }
 
@@ -80,6 +104,27 @@ namespace ChapterThree
             Console.WriteLine($"char.isPunctuation('?'): {char.IsPunctuation('?')}");
 
             Console.WriteLine($"char.IsPunctuation('!'): {char.IsPunctuation('!')}");
+        }
+
+        static void LinqQueryOverInts()
+        {
+            int[] numbers = { 10, 20, 30, 40, 1, 2, 3, 8 };
+
+            var subset = from i in numbers where i < 10 select i;
+
+            Console.WriteLine($"subset is a: {subset.GetType().Name}");
+            Console.WriteLine($"subset is defined in: {subset.GetType().Namespace}");
+        }
+
+        static void WhileLoopExample()
+        {
+            string userIsDone = "";
+            while (userIsDone.ToLower() != "yes")
+            {
+                Console.WriteLine("In while loop");
+                Console.Write("Are you done? [Yes] [No]:");
+                userIsDone = Console.ReadLine();
+            }
         }
     }
 }
