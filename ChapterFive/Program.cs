@@ -8,9 +8,10 @@ namespace ChapterFive
         {
             var motor = new Motorcycle();
 
-            motor.SetDriverName("Jacob");
+            //motor.SetDriverName("Jacob");
 
             Console.WriteLine($"The drive name is {motor.name}");
+            Console.WriteLine($"The company is {Motorcycle.company}");
 
             Console.ReadKey();
         } 
