@@ -29,9 +29,9 @@ namespace ChapterThree
             FormatNumericalData();
 
 
-            var floatNum = 1.23f;
-            var doubleNum = 1.23;
-            var decimalNum = 1.23m;
+            //var floatNum = 1.23f;
+            //var doubleNum = 1.23;
+            //var decimalNum = 1.23m;
             //var is not a c# key word
             //var var = "var";
             
